@@ -12,6 +12,12 @@ TOKEN = os.getenv("TOKEN")
 bot= Bot(token=TOKEN)
 dp= Dispatcher()
 
+@dp.message(CommandStart())
+async def g(a:Message):
+    await a.answer('salam')
+@dp.message(Command('adil'))
+async def g(a:Message):
+    await a.answer('xaw')
 
 async def main():
     print('bot ishladi')
